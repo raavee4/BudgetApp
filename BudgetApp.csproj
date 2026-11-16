@@ -12,11 +12,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="DTO\" />
-    <Folder Include="Data\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Services\" />
+    <Compile Remove="BudgetApp.Tests\**" />
+    <Content Remove="BudgetApp.Tests\**" />
+    <EmbeddedResource Remove="BudgetApp.Tests\**" />
+    <None Remove="BudgetApp.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BudgetApp\Data\" />
+    <Folder Include="BudgetApp\Domain\Constants\" />
+    <Folder Include="BudgetApp\Domain\Entities\" />
+    <Folder Include="BudgetApp\Domain\Enums\" />
+    <Folder Include="BudgetApp\Extensions\" />
+    <Folder Include="BudgetApp\Features\Authentication\" />
+    <Folder Include="BudgetApp\Features\Budgets\" />
+    <Folder Include="BudgetApp\Features\Reports\" />
+    <Folder Include="BudgetApp\Features\SavingGoals\" />
+    <Folder Include="BudgetApp\Features\Statements\" />
+    <Folder Include="BudgetApp\Features\Transactions\" />
+    <Folder Include="BudgetApp\Services\" />
   </ItemGroup>
 
 </Project>
