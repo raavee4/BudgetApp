@@ -10,6 +10,6 @@ public class Statement
     public string OriginalFileName { get; set; }
     public DateTime UploadedAt { get; set; }
     public StatementStatus StatementStatus { get; set; }
-    public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
+    public ICollection<FinancialTransaction> FinancialTransactions { get; set; } = new List<FinancialTransaction>();
     public ApplicationUser User { get; set; }
 }
