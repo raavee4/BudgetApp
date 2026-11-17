@@ -9,28 +9,34 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.*" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="BudgetApp.Tests\**" />
-    <Content Remove="BudgetApp.Tests\**" />
-    <EmbeddedResource Remove="BudgetApp.Tests\**" />
-    <None Remove="BudgetApp.Tests\**" />
+    <Compile Remove="..\BudgetApp.Tests\**" />
+    <Content Remove="..\BudgetApp.Tests\**" />
+    <EmbeddedResource Remove="..\BudgetApp.Tests\**" />
+    <None Remove="..\BudgetApp.Tests\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BudgetApp\Data\" />
-    <Folder Include="BudgetApp\Domain\Constants\" />
-    <Folder Include="BudgetApp\Domain\Entities\" />
-    <Folder Include="BudgetApp\Domain\Enums\" />
-    <Folder Include="BudgetApp\Extensions\" />
-    <Folder Include="BudgetApp\Features\Authentication\" />
-    <Folder Include="BudgetApp\Features\Budgets\" />
-    <Folder Include="BudgetApp\Features\Reports\" />
-    <Folder Include="BudgetApp\Features\SavingGoals\" />
-    <Folder Include="BudgetApp\Features\Statements\" />
-    <Folder Include="BudgetApp\Features\Transactions\" />
-    <Folder Include="BudgetApp\Services\" />
+    <Folder Include="Domain\Constants\" />
+    <Folder Include="Domain\Enums\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Features\Budgets\" />
+    <Folder Include="Features\Reports\" />
+    <Folder Include="Features\SavingGoals\" />
+    <Folder Include="Features\Statements\" />
+    <Folder Include="Features\Transactions\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
 </Project>

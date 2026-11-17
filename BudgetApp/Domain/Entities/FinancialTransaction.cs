@@ -1,6 +1,6 @@
 ﻿namespace BudgetApp.Models;
 
-public class Transaction
+public class FinancialTransaction
 {
     public int Id { get; set; }
     public string UserId { get; set; }
