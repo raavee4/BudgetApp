@@ -18,7 +18,37 @@ JWT Authentication + MFA
 
 ## Features
 
-TBD...
+### Authentication
+User Registration, 
+User Login, 
+Multi-Factor Authentication (MFA), 
+JWT-based session management, 
+### Statement Management, 
+Statement Upload Portal, 
+Upload Processing Status, 
+AI Categorization Review Screen, 
+Transaction Verification Workflows
+### Transaction Management
+Transaction List View, 
+Manual Transaction Entry, 
+Transaction Editing, 
+Category Management
+### Financial Dashboards
+Spending by Category (Pie Chart), 
+Income vs Spending Flow (Sankey Diagram), 
+Savings Goal Progress, 
+Historical Spending Trends, 
+Budget Utilization Reports, 
+Investment Performance Tracking, 
+Savings Account Interest Tracking, 
+### Budget Planning
+Weekly Budgeting, 
+Bi-Weekly Budgeting, 
+Monthly Budgeting, 
+Aggressive Savings Strategy, 
+Normal Savings Strategy, 
+Low Savings Strategy, 
+Budget Alert Notifications
 
 
 ## Endpoints
