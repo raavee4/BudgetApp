@@ -1,5 +1,5 @@
 ﻿namespace BudgetApp.Features.Authentication.Login;
 
-public class LoginCommandHandler
+public class LoginHandler
 {
 }
