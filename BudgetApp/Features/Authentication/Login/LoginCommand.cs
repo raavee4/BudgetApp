@@ -1,7 +1,8 @@
-﻿namespace BudgetApp.Features.Authentication.Login;
+﻿using MediatR;
 
-public class LoginCommand
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
-}
+namespace BudgetApp.Features.Authentication.Login;
+
+public record LoginCommand(
+    string Email,
+    string Password
+    ) : IRequest<LoginResponse>;

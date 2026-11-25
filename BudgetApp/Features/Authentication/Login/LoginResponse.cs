@@ -1,8 +1,5 @@
 ﻿namespace BudgetApp.Features.Authentication.Login;
 
-public class LoginResponse
-{
-    public string Token { get; set; }
-    public string RefreshToken { get; set; }
-    public string Expiration { get; set; }
-}
+public record LoginResponse(string Token,
+     string RefreshToken,
+     DateTime Expiration);

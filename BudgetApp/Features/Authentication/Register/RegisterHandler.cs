@@ -60,11 +60,7 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, RegisterResponse
             await _context.SaveChangesAsync(cancellationToken);
             await transaction.CommitAsync(cancellationToken);
 
-            return new RegisterResponse
-            {
-                UserId = user.Id,
-                Email = user.Email!
-            };
+            return new RegisterResponse(user.Id, user.Email!);
         }
         catch
         {
