@@ -1,7 +1,5 @@
 ﻿namespace BudgetApp.Features.Authentication.Register;
 
-public class RegisterResponse
-{
-    public string UserId { get; set; }
-    public string Email { get; set; }
-}
+public record RegisterResponse(string UserId,
+     string Email);
+

@@ -11,6 +11,7 @@
     <PackageReference Include="FluentValidation" Version="12.2.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.2.0" />
     <PackageReference Include="MediatR" Version="15.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.15">
       <PrivateAssets>all</PrivateAssets>
@@ -40,7 +41,6 @@
     <Folder Include="Features\SavingGoals\" />
     <Folder Include="Features\Statements\" />
     <Folder Include="Features\Transactions\" />
-    <Folder Include="Infrastructure\" />
   </ItemGroup>
 
 </Project>

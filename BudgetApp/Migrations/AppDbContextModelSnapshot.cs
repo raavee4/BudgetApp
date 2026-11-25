@@ -298,13 +298,13 @@ namespace BudgetApp.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
+                    b.Property<int?>("Age")
                         .HasColumnType("integer");
 
                     b.Property<int>("BudgetFrequency")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("Income")
+                    b.Property<decimal?>("Income")
                         .HasColumnType("numeric");
 
                     b.Property<int>("ReportFrequency")

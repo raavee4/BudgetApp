@@ -1,4 +1,5 @@
-﻿using BudgetApp.Features.Authentication.Register;
+﻿using BudgetApp.Features.Authentication.Login;
+using BudgetApp.Features.Authentication.Register;
 
 using MediatR;
 
@@ -18,6 +19,13 @@ public class AuthenticationController : ControllerBase
 
     [HttpPost("register")]
     public async Task<ActionResult<RegisterResponse>> Register([FromBody] RegisterCommand command)
+    {
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+    [HttpPost("login")]
+    public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginCommand command)
     {
         var result = await _mediator.Send(command);
         return Ok(result);
