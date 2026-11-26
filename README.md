@@ -55,15 +55,3 @@ Budget Alert Notifications
 
 TBD..
 
-## Holiday Schedule
-
-### Days Off
-11/20/26 - Sick with cold
-
-### Upcoming:
-
-11/26/26 - Thanksgiving Holiday
-
-12/4/26 - My Birthday
-
-12/25/26 - Christmas Holiday
