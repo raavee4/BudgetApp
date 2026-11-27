@@ -245,7 +245,7 @@ namespace BudgetApp.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UserId = table.Column<string>(type: "text", nullable: false),
-                    Income = table.Column<decimal>(type: "numeric", nullable: false),
+                    MonthlyIncome = table.Column<decimal>(type: "numeric", nullable: false),
                     Age = table.Column<int>(type: "integer", nullable: false),
                     SavingPreference = table.Column<int>(type: "integer", nullable: false),
                     BudgetFrequency = table.Column<int>(type: "integer", nullable: false),
