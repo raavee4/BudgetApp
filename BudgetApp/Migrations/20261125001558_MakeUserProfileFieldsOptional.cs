@@ -11,7 +11,7 @@ namespace BudgetApp.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<decimal>(
-                name: "Income",
+                name: "MonthlyIncome",
                 table: "UserProfiles",
                 type: "numeric",
                 nullable: true,
@@ -31,7 +31,7 @@ namespace BudgetApp.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<decimal>(
-                name: "Income",
+                name: "MonthlyIncome",
                 table: "UserProfiles",
                 type: "numeric",
                 nullable: false,

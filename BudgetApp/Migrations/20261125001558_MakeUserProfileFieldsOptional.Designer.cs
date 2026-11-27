@@ -307,7 +307,7 @@ namespace BudgetApp.Migrations
                     b.Property<int>("BudgetFrequency")
                         .HasColumnType("integer");
 
-                    b.Property<decimal?>("Income")
+                    b.Property<decimal?>("MonthlyIncome")
                         .HasColumnType("numeric");
 
                     b.Property<int>("ReportFrequency")

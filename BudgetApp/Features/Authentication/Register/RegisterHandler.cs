@@ -67,7 +67,5 @@ public class RegisterHandler : IRequestHandler<RegisterCommand, RegisterResponse
             await transaction.RollbackAsync(cancellationToken);
             throw;
         }
-
-
     }
 }
