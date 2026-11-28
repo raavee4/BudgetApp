@@ -30,7 +30,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Identity/Auth
 builder.Services
-    .AddIdentity<ApplicationUser, IdentityRole>()
+    .AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
+        options.Password.RequiredLength = 8;
+        options.Password.RequireUppercase = true;
+        options.Password.RequireLowercase = true;
+        options.Password.RequireDigit = true;
+        options.Password.RequireNonAlphanumeric = true;
+    })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 builder.Services.Configure<JwtOptions>(
@@ -73,6 +80,19 @@ builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserService, UserService>();
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactPolicy",
+        policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:5173")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -84,6 +104,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseCors("ReactPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
